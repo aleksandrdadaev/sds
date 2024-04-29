@@ -1,0 +1,7 @@
+.title {
+	@apply w-1/2 tablet:w-full H2 tablet:H2-mobile;
+}
+
+.alt {
+	@apply tablet:w-1/2 mobile:w-full H1 tablet:H1-mobile text-white;
+}

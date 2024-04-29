@@ -1,0 +1,15 @@
+.wrapper {
+	@apply block h-fit tablet:w-1/2 tablet:px-0 mobile:w-full T3 tablet:T3-mobile button transition-colors;
+}
+
+.white {
+	@apply button-white h-fit tablet:w-1/2 tablet:px-0 mobile:w-full;
+}
+
+.buttonLoading {
+	@apply py-0 h-[52px] tablet:h-50 flex justify-center items-center;
+}
+
+.loader {
+	@apply block;
+}

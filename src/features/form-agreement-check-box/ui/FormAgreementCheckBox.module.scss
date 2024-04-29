@@ -1,0 +1,7 @@
+.agreement {
+	@apply link inline transition-colors;
+
+	&.white {
+		@apply link-white inline;
+	}
+}

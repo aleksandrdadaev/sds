@@ -1,0 +1,27 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile;
+
+	> h2 {
+		@apply mb-150 tablet:mb-75;
+	}
+}
+
+.content {
+	@apply w-full flex mobile:flex-col gap-100 laptop:gap-50 tablet:gap-20 mobile:gap-30;
+}
+
+.img {
+	@apply relative w-1/2 tablet:w-full shrink-0 tablet:shrink aspect-video mobile:aspect-square;
+}
+
+.info {
+	@apply w-full flex flex-col justify-between mobile:gap-30;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile;
+}
+
+.button {
+	@apply tablet:w-fit mobile:w-full tablet:px-30 mobile:px-0;
+}

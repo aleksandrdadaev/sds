@@ -1,0 +1,15 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile grid grid-cols-[50%_1fr] tablet:grid-cols-2 mobile:grid-cols-1 gap-x-100 laptop:gap-x-50 tablet:gap-x-20 gap-y-60 tablet:gap-y-50;
+}
+
+.header {
+	@apply flex flex-col gap-40 tablet:gap-20;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile;
+}
+
+.img {
+	@apply relative row-span-2 tablet:h-500  mobile:row-auto  mobile:w-full mobile:h-auto mobile:aspect-square;
+}

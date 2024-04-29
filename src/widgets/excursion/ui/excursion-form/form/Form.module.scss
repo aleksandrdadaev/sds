@@ -1,0 +1,7 @@
+.wrapper {
+	@apply w-full flex flex-col gap-50 mobile:gap-25;
+
+	> button {
+		@apply mt-10 mobile:mt-5 tablet:w-fit mobile:w-full tablet:px-30 mobile:px-0;
+	}
+}

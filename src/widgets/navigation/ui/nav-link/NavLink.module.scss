@@ -1,0 +1,7 @@
+.link {
+	@apply T3 tablet:T3-mobile hover:text-gray-400 transition-colors;
+}
+
+.active {
+	@apply text-primary;
+}

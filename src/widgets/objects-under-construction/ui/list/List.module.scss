@@ -1,0 +1,7 @@
+.wrapper {
+	@apply w-full grid grid-cols-[50%_1fr] tablet:grid-cols-2 mobile:grid-cols-1 gap-100 laptop:gap-50 tablet:gap-20 mobile:gap-50;
+
+	> article > div:first-child {
+		@apply h-340 laptop:h-270 tablet:h-auto aspect-auto tablet:aspect-video;
+	}
+}

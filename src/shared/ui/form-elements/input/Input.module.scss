@@ -1,0 +1,23 @@
+.wrapper {
+	@apply relative flex flex-col gap-20 tablet:gap-10;
+}
+
+.label {
+	@apply block T5 tablet:T5-mobile text-gray-400;
+
+	&.white {
+		@apply text-white;
+	}
+}
+
+.input {
+	@apply w-full p-20 tablet:p-10 bg-gray-100 focus:bg-gray-200  T2 tablet:T2-mobile text-black placeholder:text-gray-300 transition-colors;
+
+	&.white {
+		@apply bg-white focus:bg-gray-100;
+	}
+}
+
+.error {
+	@apply block absolute top-[calc(100%+10px)] tablet:top-[calc(100%+5px)] T5 tablet:T5-mobile text-[#fe0037];
+}

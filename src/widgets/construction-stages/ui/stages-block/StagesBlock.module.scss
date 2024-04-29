@@ -1,0 +1,24 @@
+.wrapper {
+	@apply flex mobile:flex-col gap-100 laptop:gap-50 tablet:gap-20 mobile:gap-50;
+}
+
+.videoType {
+	@apply items-start;
+}
+
+.media {
+	@apply relative w-1/2 tablet:w-full aspect-video laptop:aspect-square mobile:aspect-video shrink-0 tablet:shrink;
+
+	> img,
+	video {
+		@apply img-object-cover;
+	}
+
+	> video {
+		@apply absolute w-full h-full;
+	}
+}
+
+.stages {
+	@apply w-full flex flex-col gap-100 tablet:gap-50;
+}

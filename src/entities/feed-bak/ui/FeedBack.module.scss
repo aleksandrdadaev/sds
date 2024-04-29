@@ -1,0 +1,11 @@
+.wrapper {
+	@apply w-full;
+}
+
+.img {
+	@apply relative w-full aspect-video bg-gray-200;
+
+	> img {
+		@apply img-object-contain;
+	}
+}

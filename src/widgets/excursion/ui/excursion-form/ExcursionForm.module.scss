@@ -1,0 +1,11 @@
+.wrapper {
+	@apply grow flex flex-col gap-30 mobile:gap-15;
+
+	> form {
+		@apply grow;
+	}
+}
+
+.text {
+	@apply T2 mobile:T2-mobile mb-40 mobile:mb-20;
+}

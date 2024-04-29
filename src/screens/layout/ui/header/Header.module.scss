@@ -1,0 +1,11 @@
+.wrapper {
+	@apply z-2 sticky top-0 w-full bg-gray-100;
+}
+
+.content {
+	@apply section laptop:section-laptop mobile:section-mobile py-30 tablet:py-10 flex items-center gap-60 tablet:gap-0 tablet:justify-between;
+}
+
+.right {
+	@apply flex items-center justify-between grow tablet:absolute tablet:top-full tablet:left-0 tablet:w-full tablet:items-start tablet:pt-40 tablet:pb-30 tablet:px-20 mobile:px-10 tablet:bg-gray-100 mobile:flex-col mobile:gap-30;
+}

@@ -1,0 +1,11 @@
+.wrapper {
+	@apply flex flex-col gap-50 tablet:gap-25;
+}
+
+.bottom {
+	@apply mt-10 tablet:mt-5 flex tablet:flex-col-reverse justify-between tablet:items-end tablet:gap-30;
+
+	> button {
+		@apply tablet:w-full;
+	}
+}

@@ -1,0 +1,11 @@
+.wrapper {
+	@apply flex mobile:flex-col gap-100 laptop:gap-50 tablet:gap-20 mobile:gap-50;
+}
+
+.video {
+	@apply w-full aspect-video;
+
+	> video {
+		@apply w-full h-full;
+	}
+}

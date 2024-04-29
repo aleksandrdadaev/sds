@@ -1,0 +1,15 @@
+.wrapper {
+	@apply fixed z-3 top-0 left-0 w-screen h-screen bg-opacity-50 bg-black flex items-center justify-center;
+}
+
+.modal {
+	@apply relative w-600 mobile:w-[calc(100%-20px)] h-[80%] p-50  mobile:px-10 bg-white;
+}
+
+.close {
+	@apply absolute top-5 right-5 w-30 h-30;
+
+	> img {
+		@apply img-object-cover;
+	}
+}

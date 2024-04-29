@@ -1,0 +1,15 @@
+.contacts {
+	@apply section laptop:section-laptop mobile:section-mobile flex mobile:flex-col gap-100 laptop:gap-50 tablet:gap-20 mobile:gap-75;
+}
+
+.imgWrapper {
+	@apply w-1/2 shrink-0 tablet:w-full tablet:shrink;
+}
+
+.img {
+	@apply relative w-1/2 shrink-0 tablet:w-full tablet:shrink aspect-video;
+
+	> img {
+		@apply img-object-cover;
+	}
+}

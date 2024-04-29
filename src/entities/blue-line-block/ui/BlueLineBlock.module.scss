@@ -1,0 +1,15 @@
+.wrapper {
+	@apply relative overflow-hidden py-15 tablet:py-10  pl-20 tablet:pl-10;
+}
+
+.blueLine {
+	@apply absolute top-0 left-0 w-[2px] h-full bg-primary;
+}
+
+.content {
+	@apply flex flex-col gap-20 tablet:gap-10;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile;
+}

@@ -1,0 +1,7 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile flex flex-col gap-150 tablet:gap-75;
+}
+
+.loader {
+	@apply self-center;
+}

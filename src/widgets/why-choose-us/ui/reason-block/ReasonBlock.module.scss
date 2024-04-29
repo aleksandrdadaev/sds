@@ -1,0 +1,19 @@
+.wrapper {
+	@apply flex mobile:flex-col gap-100 laptop:gap-50 tablet:gap-20 mobile:gap-50;
+
+	> div:first-child {
+		@apply w-1/2 tablet:w-full shrink-0 tablet:shrink;
+	}
+}
+
+.reasons {
+	@apply w-full flex flex-col gap-100 tablet:gap-50;
+}
+
+.img {
+	@apply relative w-full h-auto mobile:aspect-video;
+
+	> img {
+		@apply img-object-cover;
+	}
+}

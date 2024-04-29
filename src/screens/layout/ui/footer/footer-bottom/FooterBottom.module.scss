@@ -1,0 +1,15 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile py-20 tablet:py-10 flex mobile:flex-col justify-between items-center mobile:gap-10;
+}
+
+.userAgreement {
+	@apply T2 tablet:T2-mobile link transition-colors;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile mobile:text-center;
+
+	> span {
+		@apply text-primary;
+	}
+}

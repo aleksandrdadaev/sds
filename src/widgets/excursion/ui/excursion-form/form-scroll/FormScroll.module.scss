@@ -1,0 +1,19 @@
+.wrapper {
+	@apply relative w-full h-full inset-0 #{!important};
+}
+
+.scroller {
+	@apply scroll-smooth;
+}
+
+.content {
+	@apply p-0 flex flex-col #{!important};
+}
+
+.trackY {
+	@apply absolute top-40 right-[-36px] h-[calc(100%-80px)] w-[6px] bg-[transparent] rounded-none mobile:hidden #{!important};
+}
+
+.thumbY {
+	@apply rounded-none bg-primary #{!important};
+}

@@ -1,0 +1,7 @@
+.wrapper {
+	@apply pt-100 tablet:pt-50;
+
+	> section:last-child {
+		@apply mt-300 tablet:mt-150;
+	}
+}

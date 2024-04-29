@@ -1,0 +1,7 @@
+.wrapper {
+	@apply block shrink-0 w-fit;
+}
+
+.img {
+	@apply h-60 w-[132px] tablet:w-80 tablet:h-[36px];
+}

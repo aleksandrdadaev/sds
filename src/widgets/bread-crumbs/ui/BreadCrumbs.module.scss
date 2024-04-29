@@ -1,0 +1,12 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile;
+	@apply mb-150 tablet:mb-75;
+}
+
+.nav {
+	@apply T4 tablet:T4-mobile text-gray-400;
+}
+
+.current {
+	@apply text-primary;
+}

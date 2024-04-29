@@ -1,0 +1,11 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile;
+
+	> h2 {
+		@apply w-1/2 mobile:w-full mb-150 tablet:mb-75;
+	}
+}
+
+.loader {
+	@apply mx-auto;
+}

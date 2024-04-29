@@ -1,0 +1,7 @@
+.body {
+	@apply w-full h-full min-h-screen flex flex-col;
+
+	> main {
+		@apply grow;
+	}
+}

@@ -1,0 +1,7 @@
+.wrapper {
+	@apply w-full flex flex-col gap-50 tablet:gap-25;
+
+	> button {
+		@apply mt-10 tablet:mt-5;
+	}
+}

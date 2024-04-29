@@ -1,0 +1,26 @@
+.wrapper {
+	@apply block;
+}
+
+.head {
+	@apply relative mb-15 tablet:mb-10;
+}
+
+.img {
+	@apply z-1 relative w-full aspect-square;
+	> img {
+		@apply img-object-cover;
+	}
+}
+
+.price {
+	@apply z-1 absolute top-5 left-5 block p-10 bg-white T3 tablet:T3-mobile;
+}
+
+.border {
+	@apply z-0 absolute -top-10 tablet:-top-5 -left-10 tablet:-left-5 block w-[calc(100%+20px)] tablet:w-[calc(100%+10px)] h-[calc(100%+20px)] tablet:h-[calc(100%+10px)] bg-primary;
+}
+
+.name {
+	@apply w-fit T2 tablet:T2-mobile;
+}

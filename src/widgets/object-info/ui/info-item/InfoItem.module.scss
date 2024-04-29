@@ -1,0 +1,15 @@
+.wrapper {
+	@apply flex flex-col gap-10 tablet:gap-5;
+
+	> span {
+		@apply block w-fit;
+	}
+}
+
+.span {
+	@apply T5 tablet:T5-mobile;
+}
+
+.value {
+	@apply T1 tablet:T1-mobile text-primary;
+}

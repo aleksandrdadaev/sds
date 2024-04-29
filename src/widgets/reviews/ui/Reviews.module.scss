@@ -1,0 +1,27 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile flex flex-col gap-100 tablet:gap-50;
+
+	> h2 {
+		@apply mb-50 tablet:mb-25;
+	}
+}
+
+.reviews {
+	@apply grid gap-100 laptop:gap-x-50 tablet:gap-20 mobile:gap-50  grid-cols-[50%_1fr] tablet:grid-cols-2 mobile:grid-cols-1 grid-rows-[repeat(3,auto)] mobile:grid-rows-none;
+
+	> article > div:first-child {
+		@apply aspect-auto tablet:aspect-video h-340 tablet:h-auto;
+	}
+
+	> article:nth-child(2),
+	> article:nth-child(3) {
+		@apply row-span-2 mobile:row-span-1;
+		> div:first-child {
+			@apply h-550 tablet:h-300 mobile:h-auto;
+		}
+	}
+}
+
+.instLink {
+	@apply T3 tablet:T3-mobile link transition-colors self-end;
+}

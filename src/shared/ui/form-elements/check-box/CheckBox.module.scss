@@ -1,0 +1,32 @@
+.wrapper {
+	@apply relative flex items-center gap-10 select-none;
+}
+
+.input {
+	@apply absolute appearance-none;
+
+	&:checked + div > img {
+		@apply opacity-100;
+	}
+}
+
+.checkBox {
+	@apply relative w-20 h-20 shrink-0 border border-black;
+}
+
+.icon {
+	@apply absolute block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-100;
+
+	&.white {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+			hue-rotate(23deg) brightness(119%) contrast(119%);
+	}
+}
+
+.label {
+	@apply block w-full T5 tablet:T5-mobile text-gray-400;
+
+	&.white {
+		@apply text-black;
+	}
+}

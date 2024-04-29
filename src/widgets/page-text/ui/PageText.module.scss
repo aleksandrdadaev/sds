@@ -1,0 +1,16 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile flex flex-col gap-40 tablet:gap-20;
+	@apply mb-200 tablet:mb-100;
+
+	&.alt > h1 {
+		@apply mobile:hyphens-auto;
+	}
+}
+
+.text {
+	@apply w-1/2 tablet:w-full T2 tablet:T2-mobile;
+
+	&.alt {
+		@apply w-full;
+	}
+}

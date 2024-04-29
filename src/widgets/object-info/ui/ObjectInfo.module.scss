@@ -1,0 +1,4 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile w-full flex mobile:flex-col justify-end tablet:justify-start gap-80 laptop:gap-60 tablet:gap-35;
+	@apply mb-100 tablet:mb-50;
+}

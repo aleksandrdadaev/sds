@@ -1,0 +1,7 @@
+.wrapper {
+	@apply relative w-200 tablet:w-100 h-200 tablet:h-100;
+}
+
+.img {
+	@apply img-object-cover;
+}

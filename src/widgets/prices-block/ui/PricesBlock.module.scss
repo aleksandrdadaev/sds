@@ -1,0 +1,15 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile flex mobile:flex-col-reverse gap-100 laptop:gap-50 tablet:gap-20 mobile:gap-75;
+}
+
+.prices {
+	@apply w-1/2 tablet:w-full shrink-0 tablet:shrink flex flex-col gap-100 tablet:gap-50;
+}
+
+.img {
+	@apply relative w-full h-auto mobile:aspect-[3_/_4];
+
+	> img {
+		@apply img-object-cover;
+	}
+}

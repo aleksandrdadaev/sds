@@ -1,0 +1,28 @@
+.wrapper {
+	@apply relative overflow-hidden pt-[16px] tablet:pt-10 pb-20 tablet:pb-8 pl-20 tablet:pl-10;
+}
+
+.blueLine {
+	@apply absolute top-0 left-0 w-[2px] h-full bg-primary;
+}
+
+.term {
+	@apply block mb-8 tablet:mb-10 T5 tablet:T5-mobile text-gray-400;
+}
+
+.content {
+	@apply flex tablet:flex-col tablet:gap-30 justify-between items-end tablet:items-start;
+}
+
+.priceWrapper {
+	@apply flex gap-10 tablet:gap-5 items-end;
+
+	> span:first-child,
+	> span:last-child {
+		@apply block mb-3 tablet:mb-[1px] T5 tablet:T5-mobile;
+	}
+}
+
+.price {
+	@apply T1 tablet:T1-mobile text-primary;
+}

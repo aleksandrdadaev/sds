@@ -1,0 +1,39 @@
+.wrapper {
+	@apply w-full h-fit flex flex-col gap-30 tablet:gap-15;
+
+	&.alt {
+		@apply flex-row mobile:flex-col gap-100 laptop:gap-50 tablet:gap-20;
+	}
+}
+
+.img {
+	@apply relative w-full aspect-video;
+
+	> img {
+		@apply img-object-cover;
+	}
+
+	&.alt {
+		@apply w-1/2 tablet:w-full shrink-0 tablet:shrink;
+	}
+}
+
+.info {
+	@apply w-full flex flex-col gap-20 tablet:gap-10;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile line-clamp-2 tablet:line-clamp-3 mb-5;
+
+	&.alt {
+		@apply mb-0 line-clamp-5 tablet:line-clamp-4 mobile:line-clamp-3;
+	}
+}
+
+.href {
+	@apply w-fit T3 tablet:T3-mobile link border-b transition-colors;
+
+	&.alt {
+		@apply mt-auto mobile:mt-20;
+	}
+}

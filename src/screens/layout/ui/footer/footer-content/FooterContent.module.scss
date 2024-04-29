@@ -1,0 +1,7 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile py-80 tablet:py-40 flex mobile:flex-col justify-between mobile:gap-30 items-end mobile:items-start;
+}
+
+.left {
+	@apply flex flex-col gap-60 tablet:gap-50;
+}

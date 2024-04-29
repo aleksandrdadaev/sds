@@ -1,0 +1,11 @@
+.wrapper {
+	@apply w-1/2 tablet:w-[calc(50%-10px)] mobile:w-full shrink-0 tablet:shrink;
+}
+
+.slider {
+	@apply w-full aspect-video;
+}
+
+.img {
+	@apply img-object-cover;
+}

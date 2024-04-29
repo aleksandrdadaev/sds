@@ -1,0 +1,15 @@
+.wrapper {
+	@apply relative w-1/2 tablet:w-full shrink-0 tablet:shrink h-60 mobile:h-100 flex items-center mobile:justify-center;
+}
+
+.img {
+	@apply absolute top-0 mobile:top-auto mobile:bottom-0 mobile:left-1/2 right-0 h-60 aspect-square mobile:rotate-90 mobile:-translate-x-1/2;
+
+	> img {
+		@apply img-object-cover;
+	}
+}
+
+.stick {
+	@apply block w-[calc(100%-1px)] mobile:w-8 h-8 mobile:h-[calc(100%-2px)] bg-primary;
+}

@@ -1,0 +1,11 @@
+.wrapper {
+	@apply relative h-fit;
+}
+
+.label {
+	@apply T3 tablet:T3-mobile link transition-colors cursor-pointer;
+}
+
+.files {
+	@apply absolute mobile:relative mobile:mt-5 w-full top-[calc(100%+10px)] tablet:top-0 mobile:top-auto tablet:left-[calc(100%+10px)] mobile:left-auto flex flex-col gap-10;
+}

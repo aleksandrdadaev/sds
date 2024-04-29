@@ -1,0 +1,15 @@
+.wrapper {
+	@apply w-full flex flex-col justify-between mobile:gap-30;
+}
+
+.content {
+	@apply flex flex-col gap-30 tablet:gap-10;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile;
+}
+
+.anchor {
+	@apply w-fit link border-b transition-colors T3 tablet:T3-mobile;
+}

@@ -1,0 +1,27 @@
+.wrapper {
+	@apply flex tablet:flex-col-reverse mobile:flex-col items-center tablet:items-end mobile:items-start gap-30;
+
+	&.footer {
+		@apply flex-col tablet:flex-col-reverse mobile:flex-col gap-60 tablet:gap-30;
+	}
+
+	&.block {
+		@apply w-full flex-col-reverse justify-between tablet:items-center mobile:gap-50;
+	}
+}
+
+.messengers {
+	@apply flex items-center gap-30 tablet:gap-25;
+
+	&.block {
+		@apply w-full justify-between;
+	}
+}
+
+.tel {
+	@apply T3 tablet:T3-mobile transition-colors hover:text-primary;
+
+	&.block {
+		@apply T1 tablet:T1-mobile link;
+	}
+}

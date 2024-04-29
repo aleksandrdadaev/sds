@@ -1,0 +1,11 @@
+.wrapper {
+	@apply w-full flex flex-col gap-25 tablet:gap-15;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile;
+}
+
+.button {
+	@apply block w-fit T3 tablet:T3-mobile link border-b transition-colors;
+}

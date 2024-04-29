@@ -1,0 +1,7 @@
+.wrapper {
+	@apply flex flex-col gap-40 tablet:gap-15 text-white;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile;
+}

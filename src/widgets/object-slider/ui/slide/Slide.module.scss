@@ -1,0 +1,11 @@
+.wrapper {
+	@apply relative w-full aspect-video cursor-pointer;
+
+	> img {
+		@apply img-object-cover;
+	}
+}
+
+.thumb {
+	@apply brightness-50 transition-all;
+}

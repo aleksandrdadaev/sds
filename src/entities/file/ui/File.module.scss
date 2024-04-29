@@ -1,0 +1,15 @@
+.wrapper {
+	@apply flex items-center w-full;
+}
+
+.name {
+	@apply T2 tablet:T2-mobile truncate;
+}
+
+.button {
+	@apply relative shrink-0 w-20 h-20;
+}
+
+.img {
+	@apply img-object-cover;
+}

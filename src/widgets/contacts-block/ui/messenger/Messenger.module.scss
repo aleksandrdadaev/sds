@@ -1,0 +1,11 @@
+.wrapper {
+	@apply block;
+}
+
+.img {
+	@apply w-24 tablet:w-30 h-24 tablet:h-30 hover:scale-[1.2] transition-transform;
+
+	&.block {
+		@apply w-50 tablet:w-40 h-50 tablet:h-40;
+	}
+}

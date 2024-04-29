@@ -1,0 +1,15 @@
+.wrapper {
+	@apply w-full py-150 tablet:py-75  bg-primary;
+}
+
+.content {
+	@apply section laptop:section-laptop mobile:section-mobile grid grid-cols-[50%_1fr] tablet:grid-cols-1 gap-x-100 laptop:gap-x-50 gap-y-60  tablet:gap-30;
+}
+
+.img {
+	@apply relative w-full tablet:aspect-video row-[1_/_3] tablet:row-auto col-[2] tablet:col-auto;
+
+	> img {
+		@apply img-object-cover;
+	}
+}

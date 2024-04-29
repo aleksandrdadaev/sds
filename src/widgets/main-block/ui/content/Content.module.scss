@@ -1,0 +1,3 @@
+.wrapper {
+	@apply relative section laptop:section-laptop mobile:section-mobile flex flex-col gap-200 tablet:h-full tablet:justify-between;
+}

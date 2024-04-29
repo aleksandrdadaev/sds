@@ -1,0 +1,18 @@
+.wrapper {
+	@apply section laptop:section-laptop mobile:section-mobile;
+}
+
+.list {
+	@apply mb-150 tablet:mb-75 flex flex-col gap-100 tablet:gap-50;
+
+	> article:nth-child(even) {
+		@apply flex-row-reverse mobile:flex-col;
+		> div:first-child {
+			@apply shrink w-full;
+		}
+
+		> div:last-child {
+			@apply w-1/2 tablet:w-full shrink-0 tablet:shrink;
+		}
+	}
+}

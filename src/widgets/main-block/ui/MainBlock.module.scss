@@ -1,0 +1,7 @@
+.wrapper {
+	@apply relative w-full h-[calc(100vh-120px)] tablet:h-[calc(100vh-56px)] pt-270 tablet:py-100;
+
+	> img {
+		@apply object-cover object-center;
+	}
+}
