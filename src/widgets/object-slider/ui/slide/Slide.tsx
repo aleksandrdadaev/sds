@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FC } from 'react'
 
+import { getImageUrl } from '@/shared/config/api.config'
 import { fadeScaleAnimation } from '@/shared/ui/animations/fade-scale.animation'
 
 import { ISlide } from '../../model/types/slide-props.type'
@@ -20,7 +21,7 @@ const Slide: FC<ISlide> = ({ src, thumb }) => {
 			})}
 			variants={fadeScaleAnimation}
 		>
-			<Image src={src} alt='' fill />
+			<Image src={getImageUrl(src)} alt='' fill />
 		</motion.div>
 	)
 }

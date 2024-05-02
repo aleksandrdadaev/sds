@@ -1,7 +1,6 @@
 'use client'
 
 import { FC } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { FormAgreementCheckBox } from '@/features/form-agreement-check-box'
 import {
@@ -10,28 +9,17 @@ import {
 	phoneIsValid,
 } from '@/features/phone-input'
 
-import { useResize } from '@/shared/lib/hooks/useResize'
-import { IExcursionForm } from '@/shared/model/types/form/excursion-form.type'
 import Button from '@/shared/ui/button/Button'
 import Input from '@/shared/ui/form-elements/input/Input'
 import Textarea from '@/shared/ui/form-elements/textarea/Textarea'
 
+import { useApplicationForm } from '../../../lib/hooks/useApplicationForm'
+
 import styles from './Form.module.scss'
 
 const Form: FC = () => {
-	const {
-		register,
-		handleSubmit,
-		reset,
-		formState: { errors },
-	} = useForm<IExcursionForm>({ mode: 'onSubmit', disabled: false })
-
-	const onSubmit: SubmitHandler<IExcursionForm> = data => {
-		console.table(data)
-	}
-
-	const { isMobile } = useResize()
-
+	const { errors, handleSubmit, isMobile, isPending, onSubmit, register } =
+		useApplicationForm()
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.wrapper}>
 			<Input
@@ -76,7 +64,7 @@ const Form: FC = () => {
 				})}
 				error={errors.agreement}
 			/>
-			<Button isLoading={false} type='submit'>
+			<Button isLoading={isPending} type='submit'>
 				Отправить
 			</Button>
 		</form>

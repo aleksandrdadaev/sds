@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { FC } from 'react'
 import 'swiper/css/bundle'
 import { EffectFade, Thumbs, Virtual } from 'swiper/modules'

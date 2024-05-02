@@ -1,7 +1,6 @@
-import { IFormAgreement } from './form-elements.type'
+import { IComment, IFormAgreement } from './form-elements.type'
 
-export interface IUsualForm extends IFormAgreement {
+export interface IUsualForm extends IFormAgreement, IComment {
 	name: string
 	phoneNumber: string
-	comment?: string
 }

@@ -5,3 +5,7 @@
 .loader {
 	@apply self-center;
 }
+
+.span {
+	@apply self-center T3 tablet:T3-mobile;
+}

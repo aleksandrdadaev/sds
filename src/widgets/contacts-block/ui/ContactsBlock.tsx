@@ -32,7 +32,7 @@ export const ContactsBlock: FC<{
 				})}
 			>
 				{icons.map(messenger => (
-					<Messenger messenger={messenger} block={block} />
+					<Messenger messenger={messenger} block={block} key={messenger.name} />
 				))}
 			</div>
 			<MotionLink

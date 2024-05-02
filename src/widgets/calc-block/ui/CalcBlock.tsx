@@ -50,7 +50,7 @@ export const CalcBlock: FC = () => {
 					</motion.p>
 					<MotionLink
 						href={'/calc'}
-						className={clsx(stylesButton.wrapper, styles.button)}
+						className={clsx(styles.button, stylesButton.wrapper)}
 						variants={fadeAnimation}
 					>
 						Рассчитать стоимость

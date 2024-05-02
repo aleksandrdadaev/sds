@@ -1,9 +1,10 @@
 'use client'
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClientProvider } from '@tanstack/react-query'
 import { AxiosError } from 'axios'
 import { FC, PropsWithChildren } from 'react'
 
+import { queryClient } from '@/shared/config/query-client.config'
 import { IError } from '@/shared/model/types/error.type'
 
 declare module '@tanstack/react-query' {
@@ -11,14 +12,6 @@ declare module '@tanstack/react-query' {
 		defaultError: AxiosError<IError>
 	}
 }
-
-const queryClient = new QueryClient({
-	defaultOptions: {
-		queries: {
-			refetchOnWindowFocus: false,
-		},
-	},
-})
 
 const QueryProvider: FC<PropsWithChildren> = ({ children }) => {
 	return (

@@ -1,7 +1,6 @@
-import { IFormAgreement } from './form-elements.type'
+import { IComment, IFormAgreement } from './form-elements.type'
 
-export interface IEstimateForm extends IFormAgreement {
+export interface IEstimateForm extends IFormAgreement, IComment {
 	phoneNumber: string
-	comment: string
 	files: File[]
 }

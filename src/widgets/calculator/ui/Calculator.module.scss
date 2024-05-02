@@ -1,3 +1,24 @@
 .wrapper {
 	@apply section laptop:section-laptop mobile:section-mobile flex flex-col gap-100 tablet:gap-50;
 }
+
+.footer {
+	@apply w-full flex tablet:flex-col gap-100 laptop:gap-50 tablet:gap-40 items-end tablet:items-start;
+}
+
+.textWrapper {
+	@apply w-1/2 tablet:w-full shrink-0 tablet:shrink;
+}
+
+.title {
+	@apply mb-40 tablet:mb-20 H4 tablet:H4-mobile uppercase;
+	@apply font-normal;
+}
+
+.text {
+	@apply T2 tablet:T2-mobile;
+}
+
+.price {
+	@apply block w-full H1 tablet:H1-mobile;
+}

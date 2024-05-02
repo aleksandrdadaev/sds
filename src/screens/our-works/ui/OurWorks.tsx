@@ -8,16 +8,15 @@ import { PageText } from '@/widgets/page-text'
 import { PageWrapper } from '@/entities/page-wrapper'
 
 import { description, title } from '@/shared/config/meta/meta-our-works.config'
+import { IObject } from '@/shared/model/types/object.type'
 
-export const OurWorks: FC = () => {
+export const OurWorks: FC<{ objects: IObject[] }> = ({ objects }) => {
 	return (
 		<PageWrapper>
 			<BreadCrumbs />
 			<PageText title={title} text={description} />
-			<AllObjects />
+			<AllObjects objects={objects} />
 			<ApplicationBlock />
 		</PageWrapper>
 	)
 }
-
-export default OurWorks

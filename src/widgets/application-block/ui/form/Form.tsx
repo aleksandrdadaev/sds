@@ -1,7 +1,6 @@
 'use client'
 
 import { FC } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { FormAgreementCheckBox } from '@/features/form-agreement-check-box'
 import {
@@ -10,27 +9,25 @@ import {
 	phoneIsValid,
 } from '@/features/phone-input'
 
-import { useResize } from '@/shared/lib/hooks/useResize'
-import { IUsualForm } from '@/shared/model/types/form/usual-form.type'
 import { fadeAnimation } from '@/shared/ui/animations/fade.animation'
 import Button from '@/shared/ui/button/Button'
 import Input from '@/shared/ui/form-elements/input/Input'
 import Textarea from '@/shared/ui/form-elements/textarea/Textarea'
 
+import { useApplicationForm } from '../../lib/hooks/useApplicationForm'
+
 import styles from './Form.module.scss'
 
 const Form: FC = () => {
 	const {
-		register,
 		handleSubmit,
-		reset,
-		formState: { errors },
-	} = useForm<IUsualForm>({ mode: 'onSubmit', disabled: false })
-
-	const onSubmit: SubmitHandler<IUsualForm> = data => {
-		console.table(data)
-	}
-	const { isLaptop, isMobile } = useResize()
+		onSubmit,
+		register,
+		errors,
+		isPending,
+		isLaptop,
+		isMobile,
+	} = useApplicationForm()
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.wrapper}>
 			<Input
@@ -67,7 +64,12 @@ const Form: FC = () => {
 				white
 				error={errors.agreement}
 			/>
-			<Button isLoading={false} type='submit' white variants={fadeAnimation}>
+			<Button
+				isLoading={isPending}
+				type='submit'
+				white
+				variants={fadeAnimation}
+			>
 				Отправить
 			</Button>
 		</form>

@@ -9,3 +9,7 @@
 .loader {
 	@apply mx-auto;
 }
+
+.span {
+	@apply block w-fit mx-auto T3 tablet:T3-mobile;
+}

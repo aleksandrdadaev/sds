@@ -1,7 +1,7 @@
 'use client'
 
 import { FC } from 'react'
-import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import { Controller } from 'react-hook-form'
 
 import { FileInput } from '@/features/file-input'
 import { FormAgreementCheckBox } from '@/features/form-agreement-check-box'
@@ -11,27 +11,27 @@ import {
 	phoneIsValid,
 } from '@/features/phone-input'
 
-import { useResize } from '@/shared/lib/hooks/useResize'
-import { IEstimateForm } from '@/shared/model/types/form/etimate-form.type'
 import { fadeAnimation } from '@/shared/ui/animations/fade.animation'
 import Button from '@/shared/ui/button/Button'
 import Textarea from '@/shared/ui/form-elements/textarea/Textarea'
 
+import { useApplicationForm } from '../../lib/hooks/useApplicationForm'
+
 import styles from './FormWithEstimate.module.scss'
 
 const FormWithEstimate: FC = () => {
-	const { isLaptop, isTablet, isMobile } = useResize()
-
 	const {
-		register,
 		control,
+		errors,
 		handleSubmit,
-		reset,
-		formState: { errors },
-	} = useForm<IEstimateForm>({ mode: 'onSubmit', disabled: false })
-	const onSubmit: SubmitHandler<IEstimateForm> = data => {
-		console.table(data)
-	}
+		isLaptop,
+		isMobile,
+		isTablet,
+		isPending,
+		onSubmit,
+		register,
+	} = useApplicationForm()
+
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.wrapper}>
 			<PhoneInput
@@ -57,7 +57,7 @@ const FormWithEstimate: FC = () => {
 				error={errors.agreement}
 			/>
 			<div className={styles.bottom}>
-				<Button isLoading={false} type='submit' variants={fadeAnimation}>
+				<Button isLoading={isPending} type='submit' variants={fadeAnimation}>
 					Отправить
 				</Button>
 				<Controller

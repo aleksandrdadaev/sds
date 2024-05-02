@@ -1,0 +1,23 @@
+.wrapper {
+	@apply w-full flex flex-col gap-50 tablet:gap-25;
+
+	& > .inputs:last-child {
+		@apply mt-10 tablet:mt-5;
+	}
+}
+
+.inputs {
+	@apply grid grid-cols-4 laptop:grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 gap-x-80 laptop:gap-x-120 tablet:gap-20 gap-y-40;
+}
+
+.total {
+	@apply self-end H4 tablet:H4-mobile;
+}
+
+.loader {
+	@apply self-center;
+}
+
+.span {
+	@apply self-center T3 tablet:T3-mobile;
+}

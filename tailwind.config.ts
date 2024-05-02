@@ -1,6 +1,6 @@
 import lineClamp from '@tailwindcss/line-clamp'
 import type { Config } from 'tailwindcss'
-import colors, { yellow } from 'tailwindcss/colors'
+import colors from 'tailwindcss/colors'
 import plugin from 'tailwindcss/plugin'
 
 const primary: string = '#5FC5FF'

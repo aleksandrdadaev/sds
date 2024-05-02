@@ -7,6 +7,11 @@ import { IFileInputHook } from '../../model/types/file-input-props.type'
 export const useFileInput = ({ onChange, value, disabled }: IFileInputHook) => {
 	const [files, setFiles] = useState<File[]>(value || [])
 
+	useEffect(() => {
+		if (value.length === 0) setFiles(value)
+		return
+	}, [value])
+
 	const onDrop = useCallback((acceptedFiles: File[]) => {
 		if (acceptedFiles.length === 0)
 			toast.warning(

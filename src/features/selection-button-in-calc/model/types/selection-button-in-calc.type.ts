@@ -5,5 +5,6 @@ import { ICalcElement } from '@/shared/model/types/calc-element.type'
 export interface ISelectionButtonInCalc {
 	element: ICalcElement
 	checked: boolean
-	setValue: Dispatch<SetStateAction<ICalcElement>>
+	unit?: string
+	setValue: Dispatch<SetStateAction<ICalcElement | null>>
 }

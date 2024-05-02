@@ -1,2 +1,2 @@
 export const title: string = 'Калькулятор'
-export const description: string = 'Текст в калькуляторе'
+export const description: string = 'Все расчеты ведутся в черном ключ.'

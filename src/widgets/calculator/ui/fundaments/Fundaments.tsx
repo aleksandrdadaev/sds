@@ -1,48 +1,42 @@
-'use client'
-
-import { FC, useState } from 'react'
+import { FC } from 'react'
 
 import { MetreInput } from '@/features/metre-input'
-import { SelectionButtonInCalc } from '@/features/selection-button-in-calc'
 
-import { ICalcElement } from '@/shared/model/types/calc-element.type'
-import SubTitle from '@/shared/ui/sub-title/SubTitle'
+import { useFundaments } from '../../lib/hooks/useFundaments'
+import { ICalcBlockProps } from '../../model/types/calc-block-props.type'
+import CalcBlockWrapper from '../calc-block-wrapper/CalcBlockWrapper'
 
-import { calcElements } from '../../config/calc-elements.config'
-import styles from '../Block.module.scss'
+const Fundaments: FC<ICalcBlockProps> = ({ price, setPrice }) => {
+	const {
+		length,
+		width,
+		setLength,
+		setWidth,
+		currentElement,
+		setCurrentElement,
+		elements,
+		isError,
+		isLoading,
+		isSuccess,
+	} = useFundaments({
+		setPrice,
+	})
 
-const Fundaments: FC = () => {
-	const [length, setLength] = useState<number>(0)
-	const [width, setWidth] = useState<number>(0)
-	const [fundament, setFundament] = useState<ICalcElement>(calcElements[0])
-	console.log(fundament)
 	return (
-		<div className={styles.wrapper}>
-			<SubTitle>фундаменты</SubTitle>
-			<div className={styles.inputs}>
-				<MetreInput
-					label='Длина'
-					placeholder='100 М'
-					value={length}
-					onChange={setLength as any}
-				/>
-				<MetreInput
-					label='Ширина'
-					placeholder='100 М'
-					value={width}
-					onChange={setWidth as any}
-				/>
-			</div>
-			<div className={styles.inputs}>
-				{calcElements.map(element => (
-					<SelectionButtonInCalc
-						element={element}
-						checked={fundament === element}
-						setValue={setFundament}
-					/>
-				))}
-			</div>
-		</div>
+		<CalcBlockWrapper
+			title='фундаменты'
+			span='Фундаменты'
+			price={price}
+			currentElement={currentElement}
+			setCurrentElement={setCurrentElement}
+			elements={elements}
+			isError={isError}
+			isLoading={isLoading}
+			isSuccess={isSuccess}
+		>
+			<MetreInput label='Длина' value={length} onChange={setLength as any} />
+			<MetreInput label='Ширина' value={width} onChange={setWidth as any} />
+		</CalcBlockWrapper>
 	)
 }
 

@@ -2,8 +2,18 @@ import { InputMaskProps } from '@react-input/mask'
 import { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from 'react'
 import { FieldError } from 'react-hook-form'
 
+import { IStatusCode } from '../global.type'
+
 export interface IFormAgreement {
-	agreement: boolean
+	agreement?: boolean
+}
+
+export interface IFormResponse extends IStatusCode {
+	data: boolean
+}
+
+export interface IComment {
+	comment?: string
 }
 
 interface IInputProps {

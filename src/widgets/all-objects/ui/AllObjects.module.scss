@@ -16,3 +16,7 @@
 		}
 	}
 }
+
+.span {
+	@apply block mx-auto mb-150 tablet:mb-75 w-fit T3 tablet:T3-mobile;
+}

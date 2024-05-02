@@ -1,6 +1,6 @@
-import { IReasonWhy } from '@/entities/reason-why'
+import { IBlueLineBlock } from '@/entities/blue-line-block'
 
 export interface IReasonBlock {
 	image: string
-	reasons: IReasonWhy[]
+	reasons: IBlueLineBlock[]
 }
